@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export default function AnimatedLogo2() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#dc5331] p-8">
+    <div className="flex items-center justify-center min-h-screen bg-[#f8f971] p-8">
       <div className="flex items-center gap-12 md:gap-16">
         {/* Tough Tongue AI Logo */}
         <div className="h-20 w-20 md:h-32 md:w-32">

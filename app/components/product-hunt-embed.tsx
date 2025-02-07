@@ -347,12 +347,12 @@ export default function ProductHuntEmbed() {
               rel="noopener noreferrer"
               className="inline-block transform hover:scale-105 transition-transform duration-300"
             >
-              <Image 
+              <img 
                 src={phBadgeUrl}
-                alt="Product Hunt Badge" 
-                width={250}
-                height={54}
-                className="shadow-lg rounded-lg"
+                alt="Tough Tongue AI 2.0 - A multimodal agent to create, share and rehearse scenarios | Product Hunt"
+                style={{ width: '250px', height: '54px' }}
+                width="250"
+                height="54"
               />
             </a>
           </motion.div>

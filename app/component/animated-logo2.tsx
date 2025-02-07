@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 
-export default function Component() {
+export default function AnimatedLogo2() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-[#dc5331] p-8">
       <div className="flex items-center gap-12 md:gap-16">

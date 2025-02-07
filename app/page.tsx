@@ -10,7 +10,7 @@ export default function Home() {
       <div className="max-w-3xl mx-auto grid grid-cols-2 gap-6 text-center justify-center">
         <Link 
           href="/animated-logo" 
-          className="p-4 rounded-xl hover:transform hover:scale-[1.02] transition-all duration-300 bg-black/40 border border-white/20 backdrop-blur-sm group relative overflow-hidden"
+          className="p-4 rounded-xl hover:transform hover:scale-[1.02] transition-all duration-300 bg-black/40 border border-white backdrop-blur-sm group relative overflow-hidden"
         >
           <div className="relative z-10">
             <h2 className="text-xl font-semibold text-white group-hover:text-[#4B9FFF] transition-colors">
@@ -22,7 +22,7 @@ export default function Home() {
 
         <Link 
           href="/animated-logo2" 
-          className="p-4 rounded-xl hover:transform hover:scale-[1.02] transition-all duration-300 bg-black/40 border border-white/20 backdrop-blur-sm group relative overflow-hidden"
+          className="p-4 rounded-xl hover:transform hover:scale-[1.02] transition-all duration-300 bg-black/40 border border-white backdrop-blur-sm group relative overflow-hidden"
         >
           <div className="relative z-10">
             <h2 className="text-xl font-semibold text-white group-hover:text-[#4B9FFF] transition-colors">

@@ -22,19 +22,24 @@ interface Particle {
   draw: (ctx: CanvasRenderingContext2D) => void
 }
 
-export default function ProductHuntEmbed() {
+interface DefaultConfig {
+  logo: string
+  phLink: string
+  phBadgeUrl: string
+  backgroundColor: string
+}
+
+interface ProductHuntEmbedProps {
+  defaultConfig: DefaultConfig
+}
+
+export default function ProductHuntEmbed({ defaultConfig }: ProductHuntEmbedProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [customLogo, setCustomLogo] = useState(
-    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/favicon-qSap48M4U2sMdTOgDgAAZYC9UZCW2S.png"
-  )
-  const [phLink, setPhLink] = useState(
-    "https://www.producthunt.com/posts/tough-tongue-ai-2-0?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-tough&#0045;tongue&#0045;ai&#0045;2&#0045;0"
-  )
-  const [phBadgeUrl, setPhBadgeUrl] = useState(
-    "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=775464&theme=light&t=1738954913772"
-  )
-  const [backgroundColor, setBackgroundColor] = useState("#000000")
+  const [customLogo, setCustomLogo] = useState(defaultConfig.logo)
+  const [phLink, setPhLink] = useState(defaultConfig.phLink)
+  const [phBadgeUrl, setPhBadgeUrl] = useState(defaultConfig.phBadgeUrl)
+  const [backgroundColor, setBackgroundColor] = useState(defaultConfig.backgroundColor)
   const [showColorPicker, setShowColorPicker] = useState(false)
   const [activeTab, setActiveTab] = useState<'appearance' | 'links'>('appearance')
 
@@ -143,6 +148,15 @@ export default function ProductHuntEmbed() {
     }
   }, [mousePosition])
 
+  const handleResetLinks = () => {
+    setPhLink(defaultConfig.phLink)
+    setPhBadgeUrl(defaultConfig.phBadgeUrl)
+  }
+
+  const handleResetLogo = () => {
+    setCustomLogo(defaultConfig.logo)
+  }
+
   return (
     <div className="relative min-h-screen overflow-hidden" style={{ backgroundColor }}>
       <canvas
@@ -221,7 +235,7 @@ export default function ProductHuntEmbed() {
                           variant="outline"
                           size="sm"
                           className="w-full text-xs border-gray-800 hover:bg-gray-800"
-                          onClick={() => setCustomLogo("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/favicon-qSap48M4U2sMdTOgDgAAZYC9UZCW2S.png")}
+                          onClick={handleResetLogo}
                         >
                           Reset to Default
                         </Button>
@@ -286,10 +300,7 @@ export default function ProductHuntEmbed() {
                     variant="outline"
                     size="sm"
                     className="mt-2 border-gray-800 hover:bg-gray-800"
-                    onClick={() => {
-                      setPhLink("https://www.producthunt.com/posts/tough-tongue-ai-2-0?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-tough&#0045;tongue&#0045;ai&#0045;2&#0045;0")
-                      setPhBadgeUrl("https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=775464&theme=light&t=1738954913772")
-                    }}
+                    onClick={handleResetLinks}
                   >
                     Reset to Default Links
                   </Button>

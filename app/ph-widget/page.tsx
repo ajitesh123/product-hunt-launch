@@ -1,11 +1,5 @@
 import ProductHuntEmbed from '../components/product-hunt-embed'
 
-interface ProductHuntPageProps {
-  defaultLogo: string
-  defaultPhLink: string
-  defaultPhBadgeUrl: string
-}
-
 export default async function ProductHuntPage() {
   // These values are now handled server-side
   const defaultConfig = {

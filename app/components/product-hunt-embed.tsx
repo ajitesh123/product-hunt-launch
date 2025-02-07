@@ -8,6 +8,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { ChromePicker } from 'react-color'
+import Image from "next/image"
 
 interface Particle {
   x: number
@@ -192,9 +193,11 @@ export default function ProductHuntEmbed() {
                     <Label className="text-gray-300">Logo</Label>
                     <div className="flex items-center gap-4">
                       <div className="h-16 w-16 rounded-lg border border-gray-800 bg-gray-900/50 p-2 flex items-center justify-center">
-                        <img
+                        <Image
                           src={customLogo}
                           alt="Preview"
+                          width={64}
+                          height={64}
                           className="max-w-full max-h-full object-contain"
                         />
                       </div>
@@ -316,9 +319,11 @@ export default function ProductHuntEmbed() {
               ease: "easeInOut",
             }}
           >
-            <img
+            <Image
               src={customLogo}
               alt="Company Logo"
+              width={96}
+              height={96}
               className="w-24 h-24 object-contain"
             />
           </motion.div>
@@ -328,7 +333,7 @@ export default function ProductHuntEmbed() {
             animate={{ scale: [1, 1.02, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            We're live on Product Hunt! 🚀
+            We&apos;re live on Product Hunt! 🚀
           </motion.h1>
           
           <motion.div
@@ -342,12 +347,11 @@ export default function ProductHuntEmbed() {
               rel="noopener noreferrer"
               className="inline-block transform hover:scale-105 transition-transform duration-300"
             >
-              <img 
+              <Image 
                 src={phBadgeUrl}
                 alt="Product Hunt Badge" 
-                style={{ width: '250px', height: '54px' }} 
-                width="250" 
-                height="54" 
+                width={250}
+                height={54}
                 className="shadow-lg rounded-lg"
               />
             </a>

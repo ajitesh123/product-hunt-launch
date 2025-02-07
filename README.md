@@ -1,4 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Product Hunt Logo Animation Gallery
+
+A collection of animated logo designs and interactive components for Product Hunt, built with [Next.js](https://nextjs.org).
+
+## Features
+
+- **Multiple Logo Designs**: Various animated logo implementations
+  - Design 1: Basic animated logo
+  - Design 2: Alternative animation style
+  - Design 3: Customizable version
+- **Interactive Components**:
+  - Celebration effects with confetti
+  - Product Hunt widget with animations
+  - "Keep Voting" thank you message
+- **Modern UI**: Responsive design with hover effects and smooth transitions
 
 ## Getting Started
 
@@ -16,21 +30,33 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The main components are organized as follows:
+
+- `/animated-logo` - First logo design implementation
+- `/animated-logo2` - Second logo design variation
+- `/customize-logo` - Customizable logo version
+- `/celebrate` - Celebration effects with confetti
+- `/ph-widget` - Animated Product Hunt widget
+- `/keep-votes` - Thank you message component
+
+## Technology Stack
+
+- [Next.js](https://nextjs.org/) - React framework
+- TypeScript for type safety
+- Tailwind CSS for styling
+- [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) with [Geist](https://vercel.com/font)
 
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Learn Next.js](https://nextjs.org/learn)
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

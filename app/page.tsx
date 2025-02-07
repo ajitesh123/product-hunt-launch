@@ -4,10 +4,12 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black p-8 bg-[radial-gradient(rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px]">
       <h1 className="text-6xl mt-20 font-bold mb-16 text-center text-[#4B9FFF] tracking-tight">
-        Logo Animation Showcase
+        Logo Animation for Product Hunt
       </h1>
       
-      <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center justify-center">
+      <div className="h-px w-1/2 mx-auto bg-gradient-to-r from-transparent via-white to-transparent mb-24" />
+      
+      <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center justify-center">
         <Link 
           href="/animated-logo" 
           className="p-4 rounded-xl hover:transform hover:scale-[1.02] transition-all duration-300 bg-black/40 border border-white backdrop-blur-sm group relative overflow-hidden"

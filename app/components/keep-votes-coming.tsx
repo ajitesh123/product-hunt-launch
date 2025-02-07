@@ -27,19 +27,6 @@ export default function KeepVotesComing({ defaultConfig }: KeepVotesComingProps)
     initialHeight: 15 + Math.random() * 10, // Added initial height for animation variety
   }))
 
-  const barAnimation = {
-    animate: {
-      height: ["0%", "100%", "0%"],
-      y: ["100%", "0%", "100%"],
-    },
-    transition: {
-      duration: 3,
-      ease: "easeInOut",
-      repeat: Infinity,
-      repeatDelay: 0.5
-    }
-  }
-
   return (
     <div className="relative min-h-screen" style={{ backgroundColor }}>
       {/* Settings Panel */}

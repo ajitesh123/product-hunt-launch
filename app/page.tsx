@@ -105,7 +105,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             { title: 'Design 1', gif: '/gifs/PH1.gif' },
-            { title: 'Design 2', gif: '/gifs/PH2.gif' },
+            { title: 'Design 2', gif: '/gifs/Ph2.gif' },
             { title: 'Product Hunt Widget', gif: '/gifs/PH7.gif' },
           ].map((item, index) => (
             <div 

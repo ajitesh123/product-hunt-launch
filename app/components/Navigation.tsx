@@ -14,6 +14,7 @@ export default function Navigation() {
     { path: '/customize-logo', label: 'Customize Logo' },
     { path: '/animated-logo2', label: 'Animated Logo 2' },
     { path: '/animated-logo', label: 'Animated Logo' },
+    { path: '/globe-logo', label: 'Globe Logo' },
   ]
 
   return (

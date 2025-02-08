@@ -15,6 +15,7 @@ export default function Navigation() {
     { path: '/animated-logo2', label: 'Animated Logo 2' },
     { path: '/animated-logo', label: 'Animated Logo' },
     { path: '/globe-logo', label: 'Globe Logo' },
+    { path: '/product-hunt-reveal', label: 'PH Reveal' },
   ]
 
   return (

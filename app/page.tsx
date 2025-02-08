@@ -106,7 +106,9 @@ export default function Home() {
           {[
             { title: 'Design 1', gif: '/gifs/PH1.gif' },
             { title: 'Design 2', gif: '/gifs/Ph2.gif' },
-            { title: 'Product Hunt Widget', gif: '/gifs/PH7.gif' },
+            { title: 'Celbration Effect', gif: '/gifs/PH4.gif' },
+            { title: 'Keep Voting Message', gif: '/gifs/PH8.gif' },
+            { title: 'Product Hunt Widget', gif: '/gifs/PH9.gif' },
           ].map((item, index) => (
             <div 
               key={index}

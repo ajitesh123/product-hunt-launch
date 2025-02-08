@@ -96,32 +96,32 @@ export default function KeepVotesComing({ defaultConfig }: KeepVotesComingProps)
       </div>
 
       {/* Main Content */}
-      <div className="flex flex-col items-center justify-center min-h-screen p-8">
-        <div className="flex flex-col items-center max-w-4xl w-full gap-8">
+      <div className="flex flex-col items-center justify-center min-h-screen p-4">
+        <div className="flex flex-col items-center max-w-4xl w-full gap-4">
           {/* Logos */}
-          <div className="flex items-center gap-12 md:gap-16">
+          <div className="flex items-center gap-8 md:gap-12">
             <Image 
               src={logo} 
               alt="Logo" 
-              width={60} 
-              height={60} 
+              width={50} 
+              height={50} 
               className="rounded-slg"
             />
             
             {/* Vertical Divider */}
-            <div className="w-px h-16 md:h-24 bg-white/30" />
+            <div className="w-px h-12 md:h-16 bg-white/30" />
             
             <Image 
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ZSKml0TqIvLEFBULYtDXewY72UhGUY.png"
               alt="Product Hunt" 
-              width={60} 
-              height={60}
+              width={50} 
+              height={50}
             />
           </div>
 
           {/* Text Content */}
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: contentColor }}>
+            <h1 className="text-3xl md:text-4xl font-bold mb-2" style={{ color: contentColor }}>
               Thank you for all the support
             </h1>
             <div className="text-xl md:text-2xl italic" style={{ color: `${contentColor}E6` }}>

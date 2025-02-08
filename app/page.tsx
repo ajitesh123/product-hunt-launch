@@ -124,6 +124,7 @@ export default function Home() {
             { title: 'Celbration Effect', gif: '/gifs/PH4.gif' },
             { title: 'Keep Voting Message', gif: '/gifs/PH8.gif' },
             { title: 'Product Hunt Widget', gif: '/gifs/PH9.gif' },
+            { title: 'Globe Design', gif: '/gifs/PH14.gif' },
           ].map((item, index) => (
             <div 
               key={index}

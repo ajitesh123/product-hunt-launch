@@ -165,7 +165,7 @@ export default function ProductHuntEmbed({ defaultConfig }: ProductHuntEmbedProp
         style={{ opacity: 0.8 }}
       />
       
-      <div className="absolute top-4 right-4 z-20">
+      <div className="absolute top-4 right-4 z-50">
         <Popover>
           <PopoverTrigger asChild>
             <Button variant="outline" size="icon" className="bg-white/60 backdrop-blur-sm">

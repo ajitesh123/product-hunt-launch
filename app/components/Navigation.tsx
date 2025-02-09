@@ -12,8 +12,6 @@ export default function Navigation() {
     { path: '/celebrate', label: 'Celebrate' },
     { path: '/ph-widget', label: 'PH Widget' },
     { path: '/customize-logo', label: 'Customize Logo' },
-    { path: '/animated-logo2', label: 'Animated Logo 2' },
-    { path: '/animated-logo', label: 'Animated Logo' },
     { path: '/globe-logo', label: 'Globe Logo' },
     { path: '/product-hunt-reveal', label: 'PH Reveal' },
   ]

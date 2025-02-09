@@ -7,11 +7,13 @@ import { motion } from "framer-motion"
 interface ProductHuntCelebrationProps {
   backgroundColor?: string
   confettiColors?: string[]
+  productHuntLink?: string
 }
 
 export default function ProductHuntCelebration({
   backgroundColor = "#f8f971",
   confettiColors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff"],
+  productHuntLink = "https://www.producthunt.com/posts/tough-tongue-ai-2-0",
 }: ProductHuntCelebrationProps) {
   const [windowSize, setWindowSize] = useState({
     width: 0,
@@ -36,6 +38,9 @@ export default function ProductHuntCelebration({
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
   }, [])
+
+  const embedLink = `${productHuntLink}?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-tough-tongue-ai-2-0`
+  const badgeLink = `https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=775464&theme=light&t=1739071675916`
 
   return (
     <div
@@ -87,14 +92,14 @@ export default function ProductHuntCelebration({
           }}
         >
           <a
-            href="https://www.producthunt.com/posts/tough-tongue-ai-2-0?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-tough-tongue-ai-2-0"
+            href={embedLink}
             target="_blank"
             rel="noopener noreferrer"
             className="block transform hover:scale-105 transition-transform duration-300"
           >
             <img
-              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=775464&theme=light&t=1739071675916"
-              alt="Tough Tongue AI 2.0 - A multimodal agent to create, share and rehearse scenarios | Product Hunt"
+              src={badgeLink}
+              alt="Product Hunt Badge"
               style={{ width: "250px", height: "54px" }}
               width="250"
               height="54"

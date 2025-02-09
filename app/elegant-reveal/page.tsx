@@ -1,4 +1,4 @@
-import ElegantAnimatedLogo from "../components/elegant-animated-logo"
+import ElegantAnimatedLogo from "./elegant-animated-logo"
 
 export default function ElegantRevealPage() {
   return <ElegantAnimatedLogo />

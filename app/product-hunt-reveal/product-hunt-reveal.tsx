@@ -7,11 +7,13 @@ import Image from 'next/image'
 interface ProductHuntRevealClientProps {
   bgColor: string
   textColor: string
+  iframeUrl: string
 }
 
 export function ProductHuntRevealClient({ 
   bgColor = '#eab308',
-  textColor = '#ffffff' 
+  textColor = '#ffffff',
+  iframeUrl
 }: ProductHuntRevealClientProps) {
   const [showBadge, setShowBadge] = useState(false)
 
@@ -142,17 +144,17 @@ export function ProductHuntRevealClient({
             <div className="flex justify-center">
               <div className="w-full max-w-[350px] transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 rounded-lg p-4">
                 <a 
-                  href="https://www.producthunt.com/posts/tough-tongue-ai-2-0?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-tough&#0045;tongue&#0045;ai&#0045;2&#0045;0" 
+                  href="https://www.producthunt.com/posts/tough-tongue-ai-2-0"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full relative aspect-[350/64]"
                 >
                   <Image 
-                    src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=775464&theme=light&period=daily&t=1739045186971" 
-                    alt="Tough Tongue AI 2.0 on Product Hunt"
+                    src={iframeUrl}
+                    alt="Product Hunt Badge"
                     fill
                     className="object-contain"
-                    unoptimized // Since it's an SVG from external source
+                    unoptimized
                   />
                 </a>
               </div>

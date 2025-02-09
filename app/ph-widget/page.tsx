@@ -1,4 +1,4 @@
-import ProductHuntEmbed from '../components/product-hunt-embed'
+import ProductHuntEmbed from './product-hunt-embed'
 
 export default async function ProductHuntPage() {
   // These values are now handled server-side

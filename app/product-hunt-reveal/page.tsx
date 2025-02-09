@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { ProductHuntRevealClient } from '../components/product-hunt-reveal'
+import { ProductHuntRevealClient } from './product-hunt-reveal'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
@@ -12,16 +12,20 @@ import { Settings2 } from "lucide-react"
 export default function ProductHuntReveal() {
   const DEFAULT_BG_COLOR = '#f8f971'
   const DEFAULT_TEXT_COLOR = '#000000'
+  const DEFAULT_IFRAME_URL = 'https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=775464&theme=light&period=daily&t=1739045186971'
 
   const [bgColor, setBgColor] = useState(DEFAULT_BG_COLOR)
   const [textColor, setTextColor] = useState(DEFAULT_TEXT_COLOR)
+  const [iframeUrl, setIframeUrl] = useState(DEFAULT_IFRAME_URL)
 
   // Load saved colors on mount
   useEffect(() => {
     const savedBgColor = localStorage.getItem('ph-bg-color')
     const savedTextColor = localStorage.getItem('ph-text-color')
+    const savedIframeUrl = localStorage.getItem('ph-iframe-url')
     if (savedBgColor) setBgColor(savedBgColor)
     if (savedTextColor) setTextColor(savedTextColor)
+    if (savedIframeUrl) setIframeUrl(savedIframeUrl)
   }, [])
 
   // Save colors when they change
@@ -37,11 +41,19 @@ export default function ProductHuntReveal() {
     localStorage.setItem('ph-text-color', newColor)
   }
 
+  const handleIframeUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newUrl = e.target.value
+    setIframeUrl(newUrl)
+    localStorage.setItem('ph-iframe-url', newUrl)
+  }
+
   const handleReset = () => {
     setBgColor(DEFAULT_BG_COLOR)
     setTextColor(DEFAULT_TEXT_COLOR)
+    setIframeUrl(DEFAULT_IFRAME_URL)
     localStorage.removeItem('ph-bg-color')
     localStorage.removeItem('ph-text-color')
+    localStorage.removeItem('ph-iframe-url')
   }
 
   return (
@@ -101,6 +113,20 @@ export default function ProductHuntReveal() {
                       </div>
                     </div>
 
+                    <div className="space-y-2">
+                      <Label htmlFor="iframeUrl" className="text-sm text-muted-foreground">
+                        Badge URL
+                      </Label>
+                      <Input
+                        type="text"
+                        id="iframeUrl"
+                        value={iframeUrl}
+                        onChange={handleIframeUrlChange}
+                        className="h-10 font-mono text-xs"
+                        placeholder="Enter Product Hunt badge URL..."
+                      />
+                    </div>
+
                     <Button 
                       onClick={handleReset}
                       variant="secondary" 
@@ -116,7 +142,11 @@ export default function ProductHuntReveal() {
           </Accordion>
         </Card>
       </div>
-      <ProductHuntRevealClient bgColor={bgColor} textColor={textColor} />
+      <ProductHuntRevealClient 
+        bgColor={bgColor} 
+        textColor={textColor} 
+        iframeUrl={iframeUrl}
+      />
     </div>
   )
 } 

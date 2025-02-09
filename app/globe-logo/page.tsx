@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import GlobeAnimatedLogo from "../components/globe-animated-logo"
+import GlobeAnimatedLogo from "./globe-animated-logo"
 import {
   Accordion,
   AccordionContent,

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import CelebratoryAnimatedLogo from "../components/celebratory-animated-logo"
+import CelebratoryAnimatedLogo from "./celebratory-animated-logo"
 import {
   Accordion,
   AccordionContent,

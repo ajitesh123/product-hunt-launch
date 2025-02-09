@@ -1,4 +1,4 @@
-import AnimatedLogo from "../components/animated-logo"
+import AnimatedLogo from "./animated-logo"
 
 export default function AnimatedLogoPage() {
   return (

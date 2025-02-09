@@ -1,4 +1,4 @@
-import KeepVotesComing from '../components/keep-votes-coming'
+import KeepVotesComing from './keep-votes-coming'
 
 export default function KeepVotesPage() {
   const defaultConfig = {

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import ProductHuntCelebration from "../components/product-hunt-celebration"
+import ProductHuntCelebration from "./product-hunt-celebration"
 import {
   Accordion,
   AccordionContent,

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useRef } from "react"
-import CustomizableAnimatedLogo from "../components/customizable-animated-logo"
+import CustomizableAnimatedLogo from "./customizable-animated-logo"
 import {
   Accordion,
   AccordionContent,

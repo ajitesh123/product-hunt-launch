@@ -8,12 +8,14 @@ interface ProductHuntRevealClientProps {
   bgColor: string
   textColor: string
   iframeUrl: string
+  customLogo?: string
 }
 
 export function ProductHuntRevealClient({ 
   bgColor = '#eab308',
   textColor = '#ffffff',
-  iframeUrl
+  iframeUrl,
+  customLogo
 }: ProductHuntRevealClientProps) {
   const [showBadge, setShowBadge] = useState(false)
 
@@ -127,6 +129,26 @@ export function ProductHuntRevealClient({
       <div className="max-w-4xl w-full mx-auto">
         {!showBadge && (
           <div className="text-center animate-fade-scale-in">
+            <div className="flex items-center justify-center gap-12 md:gap-16 mb-12">
+              <div className="h-16 w-16 md:h-24 md:w-24">
+                <img
+                  src={customLogo || "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/favicon-qSap48M4U2sMdTOgDgAAZYC9UZCW2S.png"}
+                  alt="Company Logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+
+              <div className="w-px h-12 md:h-20 bg-neutral-300" />
+
+              <div className="relative w-16 h-16 md:h-24 md:w-24 rounded-full bg-black flex items-center justify-center overflow-hidden">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ZSKml0TqIvLEFBULYtDXewY72UhGUY.png"
+                  alt="Product Hunt Cat"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
             <h1 className="text-2xl md:text-4xl font-bold mb-6 animate-bounce" style={{ color: textColor }}>
               🎉 We had a great time at Product Hunt! 🎉
             </h1>
